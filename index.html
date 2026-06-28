@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mon Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e293b,#111827);
+    color:white;
+}
+
+/* Header */
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    backdrop-filter:blur(15px);
+    background:rgba(255,255,255,.08);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    z-index:1000;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#38bdf8;
+}
+
+.logo:hover{
+    color:white;
+    text-shadow:0 0 10px #38bdf8;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#38bdf8;
+    transform:translateY(-2px);
+}
+    
+
+/* Hero */
+
+.hero{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:55px;
+}
+
+.hero h1 span{
+    color:#38bdf8;
+}
+
+.hero p{
+    margin-top:15px;
+    max-width:700px;
+    color:#d1d5db;
+    opacity:0.7;
+}
+
+.btn{
+    margin-top:30px;
+    padding:14px 30px;
+    border-radius:40px;
+    text-decoration:none;
+    background:#38bdf8;
+    color:#000;
+    font-weight:bold;
+    transition:.4s;
+}
+
+.btn:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 25px #38bdf8;
+}
+
+/* Sections */
+
+section{
+    padding:100px 8%;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:40px;
+}
+
+/* Cards */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(15px);
+    border-radius:20px;
+    padding:25px;
+    transition:.4s;
+    border:1px solid rgba(255,255,255,.15);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px rgba(56,189,248,.5);
+}
+
+.card h3{
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#d1d5db;
+}
+
+/* Skills */
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.skill{
+    background:#38bdf8;
+    color:#000;
+    padding:10px 20px;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:#aaa;
+}
+
+/* Animation */
+
+.hero h1,
+.hero p,
+.btn{
+    animation:fade 1s ease;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">Portfolio</div>
+
+<nav>
+<a href="#">Accueil</a>
+<a href="#projets">Projets</a>
+<a href="#skills">Compétences</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>Salut, je suis <span>Votre Nom</span></h1>
+
+<p>
+Développeur passionné par le web, la cybersécurité et la création
+d'interfaces modernes.
+</p>
+
+<a href="#projets" class="btn">Voir mes projets</a>
+
+</section>
+
+<section id="projets">
+
+<h2>Mes Projets</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Projet 1</h3>
+<p>Description du projet.</p>
+</div>
+
+<div class="card">
+<h3>Projet 2</h3>
+<p>Description du projet.</p>
+</div>
+
+<div class="card">
+<h3>Projet 3</h3>
+<p>Description du projet.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2>Compétences</h2>
+
+<div class="skills">
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
+<div class="skill">JavaScript(base)</div>
+<div class="skill">Python</div>
+<div class="skill">Linux</div>
+<div class="skill">Git</div>
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2>Contact</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Email</h3>
+<p>votre@email.com</p>
+</div>
+
+<div class="card">
+<h3>GitHub</h3>
+<p>github.com/votreprofil</p>
+</div>
+
+<div class="card">
+<h3>LinkedIn</h3>
+<p>linkedin.com/in/votreprofil</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 - Tous droits réservés.
+</footer>
+
+</body>
+</html>
